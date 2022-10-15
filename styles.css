@@ -1,0 +1,53 @@
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+.header-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    height: 15vh;
+}
+.main-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+
+}
+.filters-block{
+    background-color: lime;
+    display: flex;
+    flex-direction: column;
+}
+.card-css{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+.footer-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: italic;
+    height: 10vh;
+}
+.footer-block > h3 > a{
+    color:white;
+    text-transform: capitalize;
+
+}
