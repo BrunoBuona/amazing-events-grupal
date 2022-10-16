@@ -103,3 +103,31 @@ h2{
     color:white;
     text-transform: capitalize;
 }
+
+@media screen and (max-width: 775px){
+    h1{
+        text-align: center;
+    }
+    .main-block{
+        flex-direction: column;
+    }
+    .filters-block{
+        flex-direction: row;
+        width: 100%;
+        height: 45%;
+    }
+    .card{
+        margin: .5rem;
+    }
+    .filters-block{
+        flex-wrap: wrap;
+    }
+    footer{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 240px){
+    .footer-block{
+        height: 20vh;
+    }
+}
