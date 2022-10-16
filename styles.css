@@ -14,7 +14,6 @@
 .main-block{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     background-color: grey;
 
@@ -23,18 +22,31 @@
     background-color: lime;
     display: flex;
     flex-direction: column;
+    width: 15vw;
 }
-.card-css{
+
+.cards-css{
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    height: 75vh;
+    padding: .5rem;
 }
-
-
-
-
-
-
+.card{
+    width: 30vw;
+    height: 35vh;
+}
+.card-img-top{
+    height: 46%;
+}
+.filters-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 75vh;
+}
 
 .footer-block{
     display: flex;
