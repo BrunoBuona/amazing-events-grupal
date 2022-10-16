@@ -1,133 +1,130 @@
-*{
-    font-family: 'Nunito Sans', sans-serif;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  font-family: "Nunito Sans", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-.header-block{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: bold;
-    height: 15vh;
+.header-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  height: 15vh;
 }
-.main-block{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: grey;
-    width: 100%;
-    height: auto;
+.main-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: grey;
+  width: 100%;
+  height: auto;
+}
+.filters-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgb(80, 80, 80);
+  color: white;
+  justify-content: space-evenly;
+  height: 75vh;
+  width: 30%;
+}
+h1 {
+  color: rgb(255, 216, 62);
+  font-weight: bold;
+}
+.cards-css {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
+  gap: 0.5rem;
 }
-.filters-block{
-    display: flex;
-    align-items: center;
+.card {
+  display: flex;
+  height: 205px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px black;
+  width: 120px !important;
+  padding: 0 !important;
+}
+.card-body {
+  padding: 1.2vh !important;
+}
+.card-title {
+  font-size: 14px;
+}
+.card-text {
+  font-size: 10px;
+}
+h2 {
+  font-size: 22px;
+  color: rgb(246, 197, 0);
+  font-weight: bold;
+  font-family: "Nunito Sans", bold, sans-serif;
+  text-align: center;
+}
+.btn {
+  font-size: 10px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  padding: 0 !important;
+  text-align: center;
+  border: 0 !important;
+}
+
+.card-img-top {
+  object-fit: cover;
+  max-height: 50px;
+}
+
+.footer-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: italic;
+  height: 10vh;
+}
+.footer-block > h3 > a {
+  color: white;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 775px) {
+  h1 {
+    text-align: center;
+  }
+  .main-block {
     flex-direction: column;
-    padding: 15px;
-    background-color: rgb(80, 80, 80);
-    color: white;
-    justify-content: space-evenly;
-    height: 75vh;
-    width: 30%;
-}
-h1{
-    color:rgb(255, 216, 62);
-    font-weight: bold;
-}
-.cards-css{
-    display: flex;
+  }
+  .filters-block {
+    flex-direction: row;
+    width: 100%;
+    height: 45%;
+  }
+  .card {
+    margin: 0.5rem;
+  }
+  .filters-block {
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-    gap: 0.5rem;
-}
-.card{
-    display: flex;
-    height: 205px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 2px black;
-    width: 120px!important;
-    padding: 0!important;
-}
-.card-body{
-    padding: 1.2vh!important;
-}
-.card-title{
-    font-size: 14px;
-
-}
-.card-text{
-    font-size: 10px;
-
-}
-h2{
-    font-size: 22px;
-    color: rgb(246, 197, 0);
-    font-weight: bold;
-    font-family: 'Nunito Sans', bold, sans-serif;
+  }
+  footer {
     text-align: center;
+  }
 }
-.btn{
-    font-size: 10px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    padding: 0!important;
-    text-align: center;
-
-}
-.card-img-top{
-    object-fit: cover;
-    max-height: 50px;
-}
-
-
-.footer-block{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
-    font-family: 'Nunito Sans', sans-serif;
-    font-style: italic;
-    height: 10vh;
-}
-.footer-block > h3 > a{
-    color:white;
-    text-transform: capitalize;
-}
-
-@media screen and (max-width: 775px){
-    h1{
-        text-align: center;
-    }
-    .main-block{
-        flex-direction: column;
-    }
-    .filters-block{
-        flex-direction: row;
-        width: 100%;
-        height: 45%;
-    }
-    .card{
-        margin: .5rem;
-    }
-    .filters-block{
-        flex-wrap: wrap;
-    }
-    footer{
-        text-align: center;
-    }
-}
-@media screen and (max-width: 240px){
-    .footer-block{
-        height: 20vh;
-    }
+@media screen and (max-width: 240px) {
+  .footer-block {
+    height: 20vh;
+  }
 }
