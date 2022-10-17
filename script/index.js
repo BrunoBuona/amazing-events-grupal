@@ -1,8 +1,9 @@
 let cardsJs = document.getElementById("cards-js");
 let buscador = document.getElementById("buscador")
 // Imprime las cards al cargar la pagina
-let imprimir = events.forEach(e => {
-  cardsJs.innerHTML += `
+
+function imprimir (array,contenedor){
+    array.forEach (e => {contenedor.innerHTML += `
             <div class="card">
             <img src=${e.image} class="card-img-top" alt="Card">
             <div class="card-body">
@@ -11,8 +12,9 @@ let imprimir = events.forEach(e => {
             <a href="#" class="btn btn-primary">See more</a>
             </div>
   `;
-});
-
+})
+};
+imprimir(events,cardsJs)
 // SEARCH BAR...
 
 
@@ -30,18 +32,7 @@ buscador.addEventListener("keyup", e => {
   // Dato curioso, si el usuario no ingresó nada, o borró lo que escribia
   // esto mostrará igualmente TODAS las tarjetas, ya que el filtro dejará pasar
   // a todas las tarjetas.
-  elementosFiltrados.forEach(e => {
-    // Aca basicamente se imprimen las tarjetas, no hay mucho que ver.
-    cardsJs.innerHTML += `
-<div class="card">
-<img src=${e.image} class="card-img-top" alt="Card">
-<div class="card-body">
-<h5 class="card-title">${e.name}</h5>
-<p class="card-text">${e.description}</p>
-<a href="#" class="btn btn-primary">See more</a>
-</div>
-`;
-  });
+  imprimir(elementosFiltrados,cards)
 })
 
 // CHECKBOXS...
