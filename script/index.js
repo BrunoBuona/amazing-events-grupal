@@ -80,14 +80,5 @@ checkbox.addEventListener(`change`, e=>{
       imprimir(events,cardsJs)
     }
 })
+// Probar un unconcat en el !e.target.checked para que saque las añadidas.
 
-// checksWCheck=[]
-// document.addEventListener("change", e=>{
-//   if(e.target.checked){
-//    checksWCheck = checksWCheck.concat(events.filter(categorys.includes(e.target.checked)))
-//   }if(!e.target.checked){
-
-//   }else{
-
-//   }
-// })
