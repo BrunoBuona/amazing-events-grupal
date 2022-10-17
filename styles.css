@@ -52,15 +52,25 @@ h1 {
   box-shadow: 2px 2px 2px black;
   width: 120px !important;
   padding: 0 !important;
+  background-color: rgb(255, 255, 255);
+  
 }
 .card-body {
-  padding: 1.2vh !important;
+  padding: 5px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
 }
 .card-title {
-  font-size: 14px;
+  font-size: 12px;
+  padding: 0!important;
 }
 .card-text {
-  font-size: 10px;
+  font-size: 10.5px;
+  padding: 0!important;
 }
 h2 {
   font-size: 22px;
@@ -70,11 +80,9 @@ h2 {
   text-align: center;
 }
 .btn {
-  font-size: 10px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  font-size: 9px;
+  height: 20px;
   width: 50px;
   padding: 0 !important;
   text-align: center;
@@ -83,7 +91,8 @@ h2 {
 
 .card-img-top {
   object-fit: cover;
-  max-height: 50px;
+  max-height: 45px;
+  width: 100.9%;
 }
 
 .footer-block {
@@ -97,10 +106,26 @@ h2 {
   height: 10vh;
 }
 .footer-block > h3 > a {
-  color: white;
+  color: rgb(255, 233, 32);
   text-transform: capitalize;
+  text-decoration: none;
 }
-
+.footer-block > h3{
+  font-size: 3.4vh!important;
+}
+.footer-block > h3 > a:hover {
+  color: rgb(135, 122, 6);
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.filtro{
+  display: none;
+}
+.cbotm{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 @media screen and (max-width: 775px) {
   h1 {
     text-align: center;
