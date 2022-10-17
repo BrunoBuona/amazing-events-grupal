@@ -88,5 +88,5 @@ checkbox.addEventListener(`change`, e=>{
       }
     }
   )
-// Probar un unconcat en el !e.target.checked para que saque las añadidas.
+
 
