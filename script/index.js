@@ -32,7 +32,7 @@ buscador.addEventListener("keyup", e => {
   // Dato curioso, si el usuario no ingresó nada, o borró lo que escribia
   // esto mostrará igualmente TODAS las tarjetas, ya que el filtro dejará pasar
   // a todas las tarjetas.
-  imprimir(elementosFiltrados,cards)
+  imprimir(elementosFiltrados,cardsJs)
 })
 
 // CHECKBOXS...
