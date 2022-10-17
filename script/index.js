@@ -60,20 +60,24 @@ categorias.forEach(nombreCategoria => {
   checkbox.innerHTML+=
     `
     <div class="form-check form-switch">
-    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+    <input class="form-check-input" id="${nombreCategoria}" type="checkbox" role="switch" id="flexSwitchCheckDefault">
     <label class="form-check-label" for="flexSwitchCheckDefault">${nombreCategoria}</label>
     </div> 
     `
 })
 
 
-
+let listChecked = []
 checkbox.addEventListener(`change`, e=>{
-    
     if (e.target.checked) {
-        let listChecked = []
-        listChecked = events.filter(evento=> evento.category.toLowerCase().includes(e.target.checked))
+        listChecked = listChecked.concat(events.filter(evento=> evento.category.toLowerCase().includes(e.target.id.toLowerCase())))
         console.log(listChecked);
+        cardsJs.innerHTML = ''
+        imprimir(listChecked, cardsJs)
+    }
+    else if(!e.target.checked){
+      cardsJs.innerHTML = ''
+      imprimir(events,cardsJs)
     }
 })
 
