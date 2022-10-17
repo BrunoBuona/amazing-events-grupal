@@ -66,6 +66,17 @@ categorias.forEach(nombreCategoria => {
     `
 })
 
+
+
+checkbox.addEventListener(`change`, e=>{
+    
+    if (e.target.checked) {
+        let listChecked = []
+        listChecked = events.filter(evento=> evento.category.toLowerCase().includes(e.target.checked))
+        console.log(listChecked);
+    }
+})
+
 // checksWCheck=[]
 // document.addEventListener("change", e=>{
 //   if(e.target.checked){
