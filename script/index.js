@@ -68,6 +68,7 @@ categorias.forEach(nombreCategoria => {
 
 
 let listChecked = []
+
 checkbox.addEventListener(`change`, e=>{
     if (e.target.checked) {
         listChecked = listChecked.concat(events.filter(evento=> evento.category.toLowerCase().includes(e.target.id.toLowerCase())))
@@ -75,10 +76,17 @@ checkbox.addEventListener(`change`, e=>{
         cardsJs.innerHTML = ''
         imprimir(listChecked, cardsJs)
     }
-    else if(!e.target.checked){
-      cardsJs.innerHTML = ''
-      imprimir(events,cardsJs)
+
+   else if(!e.target.checked){
+    listChecked = listChecked.filter(evento => !evento.category.toLowerCase().includes( e.target.id.toLowerCase() ) )
+    cardsJs.innerHTML = ''
+    imprimir(listChecked, cardsJs)
     }
-})
+
+    if (listChecked.length === 0){
+      imprimir(events,cardsJs)
+      }
+    }
+  )
 // Probar un unconcat en el !e.target.checked para que saque las añadidas.
 
