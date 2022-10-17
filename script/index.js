@@ -1,5 +1,6 @@
 let cardsJs = document.getElementById("cards-js");
 let buscador = document.getElementById("buscador")
+// Imprime las cards al cargar la pagina
 let imprimir = events.forEach(e => {
   cardsJs.innerHTML += `
             <div class="card">
@@ -11,14 +12,26 @@ let imprimir = events.forEach(e => {
             </div>
   `;
 });
-let arrayNames = events.map((names) => names.name.toLowerCase())
+
+// SEARCH BAR...
 
 
-let element = []
+// Esto hace que cada vez que el usuario deja de escribir en el input, empieza a ejecutar sus instrucciones paso a paso.
 buscador.addEventListener("keyup", e => {
-  elementFiltrados = arrayNames.filter(names => names.includes(e.target.value.toLowerCase()))
+  // Primer instruccion: Filtro del array de eventos y comparo si dentro de mi objeto names y su propiedad .name hay
+  // alguna coincidencia con el string que puso el usuario dentro del input.
+  // Al terminar de filtrar, guarda todos los objectos que hayan tenido coincidencia con lo que escribio el usuario
+  // dentro de la variable elementosFiltrados
+  elementosFiltrados = events.filter(names => names.name.toLowerCase().includes(e.target.value.toLowerCase()))
+  // Aca vaciamos el contenedor de cards nuevamente, para no sobre-escribir ni acumular tarjetas a las que ya teniamos.
+  // Es decir, lo vaciamos para poder mostrar nuevas tarjetas.
   cardsJs.innerHTML = ''
-  elementFiltrados.forEach(e => {
+  // Aca, en base a lo filtrado, imprimirá por pantalla las coincidencias.
+  // Dato curioso, si el usuario no ingresó nada, o borró lo que escribia
+  // esto mostrará igualmente TODAS las tarjetas, ya que el filtro dejará pasar
+  // a todas las tarjetas.
+  elementosFiltrados.forEach(e => {
+    // Aca basicamente se imprimen las tarjetas, no hay mucho que ver.
     cardsJs.innerHTML += `
 <div class="card">
 <img src=${e.image} class="card-img-top" alt="Card">
@@ -30,6 +43,11 @@ buscador.addEventListener("keyup", e => {
 `;
   });
 })
+
+// CHECKBOXS...
+
+
+
 // checksWCheck=[]
 // document.addEventListener("change", e=>{
 //   if(e.target.checked){
